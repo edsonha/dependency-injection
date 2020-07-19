@@ -12,10 +12,11 @@ namespace DependencyInjection
 			{
 				throw new Exception($"{product} currently not in stock");
 			}
-
-			Console.WriteLine($"{product} in stock");
+			Console.WriteLine("Product in stock, Processing payment now");
 
 			// Payment
+			var paymentProcessor = new PaymentProcessor();
+			paymentProcessor.ChargeCreditCard(creditCardNumber, expiryDate);
 
 			// Ship the product
 		}
