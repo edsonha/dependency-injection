@@ -11,10 +11,10 @@ namespace DependencyInjection
 			while (product != "exit")
 			{
 				Console.WriteLine(@"Enter a Product: 
-					Keyboard = 0,
-					Mouse = 1,
-					Mic = 2,
-					Speaker = 3"
+Keyboard = 0,
+Mouse = 1,
+Mic = 2,
+Speaker = 3"
 				);
 				product = Console.ReadLine();
 
@@ -31,6 +31,7 @@ namespace DependencyInjection
 						string creditCardNumber = paymentMethod.Split(";")[0];
 						string expiryDate = paymentMethod.Split(";")[1];
 						orderManager.Submit(productEnum, creditCardNumber, expiryDate);
+						Console.WriteLine("DONE");
 
 					}
 					else

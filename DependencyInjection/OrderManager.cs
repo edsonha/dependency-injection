@@ -17,8 +17,12 @@ namespace DependencyInjection
 			// Payment
 			var paymentProcessor = new PaymentProcessor();
 			paymentProcessor.ChargeCreditCard(creditCardNumber, expiryDate);
+			Console.WriteLine("Payment verifies, Processing shipment now");
 
 			// Ship the product
+			var shippingProcessor = new ShippingProcessor();
+			shippingProcessor.MailProduct(product);
+			Console.WriteLine($"{product} is shipped");
 		}
 	}
 }
