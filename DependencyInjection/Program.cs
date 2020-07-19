@@ -41,7 +41,6 @@ namespace DependencyInjection
 				catch (Exception e)
 				{
 					Console.WriteLine(e.Message);
-
 				}
 				Console.WriteLine(Environment.NewLine);
 			}
