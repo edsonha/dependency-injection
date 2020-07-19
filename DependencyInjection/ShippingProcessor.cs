@@ -2,6 +2,10 @@
 
 namespace DependencyInjection
 {
+	public interface IShippingProcessor
+	{
+		void MailProduct(Product product);
+	}
 	public class ShippingProcessor
 	{
 		public void MailProduct(Product product)

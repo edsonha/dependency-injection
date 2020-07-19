@@ -2,7 +2,11 @@
 
 namespace DependencyInjection
 {
-	public class OrderManager
+	public interface IOrderManager
+	{
+		void Submit(Product product, string creditCardNumber, string expiryDate);
+	}
+	public class OrderManager : IOrderManager
 	{
 		public void Submit(Product product, string creditCardNumber, string expiryDate)
 		{
