@@ -11,9 +11,9 @@ namespace DependencyInjection
 		{
 			var productStockDatabase = new Dictionary<Product, int>();
 			productStockDatabase.Add(Product.Keyboard, 1);
-			productStockDatabase.Add(Product.Mic, 1);
+			productStockDatabase.Add(Product.Mic, 0);
 			productStockDatabase.Add(Product.Mouse, 1);
-			productStockDatabase.Add(Product.Speaker, 1);
+			productStockDatabase.Add(Product.Speaker, 0);
 			return productStockDatabase;
 		}
 
