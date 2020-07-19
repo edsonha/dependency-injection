@@ -7,7 +7,14 @@ namespace DependencyInjection
 		static void Main(string[] args)
 		{
 			var product = string.Empty;
-			var orderManager = new OrderManager();
+			var productStockRepository = new ProductStockRepository();
+			var orderManager = new OrderManager
+			(
+				productStockRepository,
+				new PaymentProcessor(),
+				new ShippingProcessor(productStockRepository)
+			);
+
 			while (product != "exit")
 			{
 				Console.WriteLine(@"Enter a Product: 
